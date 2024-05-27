@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class LoopingBackground : MonoBehaviour
 {
-    public
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float bckgroundSpeed;
+    public Renderer backgroundRenderer;
 
     // Update is called once per frame
     void Update()
     {
-        
+       backgroundRenderer.material.mainTextureOffset += new Vector2(bckgroundSpeed * Time.deltaTime, 0f); 
     }
 }
